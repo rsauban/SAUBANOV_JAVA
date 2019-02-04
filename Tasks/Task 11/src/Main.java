@@ -66,7 +66,7 @@ public class Main {
                 arraySortingInt[k] = numberInt;
             }
 
-        for (int i = 0; i < arraySortingInt.length; i++) System.out.println(arraySortingInt[i]);
+       // for (int i = 0; i < arraySortingInt.length; i++) System.out.println(arraySortingInt[i]);
 
 
         //  Дихотомический поиск
@@ -88,15 +88,11 @@ public class Main {
             {
                 rigth = middle;
 
-
-
             }
             else {
                 left = middle+1;
-
-
             }
-            System.out.println("left = " + left + " , rigth = " + rigth + " , middle = " + middle);
+          //  System.out.println("left = " + left + " , rigth = " + rigth + " , middle = " + middle);
         }
 
         System.out.println("Не найдено !!!");
