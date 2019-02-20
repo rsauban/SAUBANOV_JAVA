@@ -24,6 +24,7 @@ public class Channel {
     }
 
     public void setCountPrograms(int countPrograms){
+
         this.countPrograms = countPrograms;
 
     }
@@ -35,8 +36,12 @@ public class Channel {
 
 
     public void setCurrProgram(int currProgram){
-        if (currProgram < 0 && currProgram > getCountPrograms()) {
-            System.err.println("нет такой программы !!!"); return; }
+        if (currProgram > getCountPrograms()) {
+            currProgram = getCountPrograms();
+        }
+        if (currProgram < 0) {
+            currProgram = 0;
+        }
         this.currProgram = currProgram;
 
     }
@@ -61,7 +66,7 @@ public class Channel {
 
     public void showCurrProgram(){
 
-      System.out.println("com.company.Channel:" + nameChannel + "Programm: " + programs[getCurrProgram()].show());
+      System.out.println("com.company.Channel:" + nameChannel + " Programm: " + programs[getCurrProgram()].show());
     }
 
    public  void showAllPrograms (){

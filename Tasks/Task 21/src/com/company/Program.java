@@ -18,7 +18,7 @@ public class Program {
 
     public Program(){
         Random random = new Random();
-        this.nameProgram = "Программа " + random.nextInt();
+        this.nameProgram = "Программа " + random.nextInt(100);
     }
 
 
